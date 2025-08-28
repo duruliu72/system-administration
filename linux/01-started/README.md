@@ -1,3 +1,3 @@
 # system-administration
 
-![Linux](/01-started/linux.jpeg)
+![Linux](/linux/01-started/linux.jpeg)
