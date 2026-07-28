@@ -16,3 +16,10 @@ ssh bob@147.79.66.183
 cat /home/bob/.ssh/authorized_keys
 ```
 Here 147.79.66.183 Server Machine host address and bob is server Machine User. If i run ssh-copy-id bob@147.79.66.183 then Server Machine User password Will have to given at prompt.After this  ssh bob@147.79.66.183 will no required password for login.cat /home/bob/.ssh/authorized_keys is shown in server Machine.
+
+### SCP for client side vs server configuration
+```bash
+scp /home/talha/file1.txt bob@147.79.66.183:/home/bob/osudpotro
+scp bob@147.79.66.183:/home/bob/osudpotro/file1.txt /home/talha
+```
+copy file1.txt file into osudpotro .here bob is the server machine user 
