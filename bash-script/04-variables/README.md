@@ -4,14 +4,14 @@
 2.Special shell variables depend 
 on how the user interacts with the command lines. 
 ### We have to learn some special shell variables bellow
-$0  Name of the script being run
-$?  Returns exit code value
-$#  Number of arguments being passed
-$*  String of all arguments being passed
-$@  List/ separated values of all arguments being passed
-$$  Current process ID
-$!  ID of the background job
-$-  Contains flags in use by your script
+1. $0  Name of the script being run
+2. $?  Returns exit code value
+3. $#  Number of arguments being passed
+4. $*  String of all arguments being passed
+5. $@  List/ separated values of all arguments being passed
+6. $$  Current process ID
+7. $!  ID of the background job
+8. $-  Contains flags in use by your script
 #### pecial Shell Variables $?
 1.How to use Special Shell Variable  $?
 2.How to implement Special Shell Variable $? in our own scripts
