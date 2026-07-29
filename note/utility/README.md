@@ -9,7 +9,7 @@
 ## SSH and SCP
 
 ### SSH for client side configuration
- ```bash
+```bash
 ssh-keygen -t rsa
 ssh-copy-id bob@147.79.66.183
 ssh bob@147.79.66.183
