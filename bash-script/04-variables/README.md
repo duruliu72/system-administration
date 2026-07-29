@@ -1,9 +1,9 @@
 
-###Special Shell Variables
+### Special Shell Variables
 1.Allow us to access information about the current shell environment and the command-line arguments passed to a script or command.
 2.Special shell variables depend 
 on how the user interacts with the command lines. 
-###We have to learn some special shell variables bellow
+### We have to learn some special shell variables bellow
 $0  Name of the script being run
 $?  Returns exit code value
 $#  Number of arguments being passed
@@ -12,7 +12,7 @@ $@  List/ separated values of all arguments being passed
 $$  Current process ID
 $!  ID of the background job
 $-  Contains flags in use by your script
-####Special Shell Variables $?
+#### pecial Shell Variables $?
 1.How to use Special Shell Variable  $?
 2.How to implement Special Shell Variable $? in our own scripts
 $? Reserve exit codes:
