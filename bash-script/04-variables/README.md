@@ -12,7 +12,7 @@ on how the user interacts with the command lines.
 6. $$  Current process ID
 7. $!  ID of the background job
 8. $-  Contains flags in use by your script
-#### pecial Shell Variables $?
+#### Special Shell Variables $?
 1.How to use Special Shell Variable  $?
 2.How to implement Special Shell Variable $? in our own scripts
 $? Reserve exit codes:
