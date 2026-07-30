@@ -69,3 +69,5 @@ done
 ```
 Here Bash used the default IFS (space) to split the string.
 
+#### Special Shell Variables  `$*` and `$@`
+
