@@ -30,8 +30,8 @@ Exit Code Number            Meaning
 143                         Terminated (SIGTERM = 15)
 255                         Exit status out of range / general failure
 
-bob@srv660797:~$ filename="example.script.sh"
-bob@srv660797:~$ echo  ${filename#*.}
+->bob@srv660797:~$ filename="example.script.sh"
+->bob@srv660797:~$ echo  ${filename#*.}
 here the syntax is:${variable#pattern}
 It means:Remove the shortest matching prefix from the beginning of the variable that matches pattern.
 
