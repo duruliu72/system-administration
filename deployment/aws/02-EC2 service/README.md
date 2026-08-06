@@ -32,7 +32,7 @@
 +The EC2 User Data Script runs with the root user
 
 #### EC2 Instance types expampes
- ![EC2 Instance types expampes](/ec2-instance-type.png)
+ ![EC2 Instance types expampes](ec2-instance-type.png)
 
 
 
