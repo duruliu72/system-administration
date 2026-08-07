@@ -64,8 +64,34 @@ m5.2xlarge means
   * Authorised Ip ranges - IPv4 and IPv6
   * Control of inbound network (from other to the instance)
   * Control of outbound network (from the instance to other)
-  
- 
+    
+| Type               | Protocal  | Port Range  | Source                   | Description               | 
+| ------------------ | --------- | ----------- | ------------------------ | -----------               |
+| HTTP               | TCP       | 80          | 0.0.0.0/0                | test http page            |
+| SSH                | TCP       | 22          | 122.149.198.85/32        |                           |
+| Custom TCP Rule    | TCP       | 4567        | 0.0.0.0/0                | java app                  |
+
+ ![Security Groups Diagram](security_group_diagram.png)
+#### Security Groups good to know
+ + Can be attached to multiple instances
+ + Locked down to a region / VPC combination
+ + Does live "Outside" the EC2 - if traffic is blocked the EC2 instance won't see it
+ + It's goog to maintain one separate security group for SSH access
+ + If your application is not accessible (time out), then it's a security group issue
+ + if your application gives a "connection refused" error, then it's an application error or it's not launched
+ + All inbound traffic is blocked by default
+ + All outbound traffic is authorised by default
+#### Refencing othersecurity groups Diagram
+![Other Security Groups Diagram](other_security_group_diagram.png)
+
+##### Classic Ports to know
+ + 22 = SSH (Secure Shell) - log into a Linux instance
+ + 21 = FTP (File Transfer Protocol) - upload files into a file share
+ + 22 = SFTP (Secure File Transfer Protocol) upload fiels using SSH
+ + 80 = HTTP - access unsecured websites
+ + 443 = HTTPS - access secured websites
+ + 3389 = RDP (Remote Desktop Protocol) - log into a Windows instance
+
 
 
 
