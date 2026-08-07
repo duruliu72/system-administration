@@ -29,10 +29,46 @@
  * Installing software
  * Downloading common files from the internet
  * Anything you can think of
-+The EC2 User Data Script runs with the root user
++ The EC2 User Data Script runs with the root user
 
 #### EC2 Instance types expampes
  ![EC2 Instance types expampes](ec2-instance-type.png)
+
+ I have to learn 
+ + Private IPv4 addresses
+ + Public IPv4 address
+ + VPC,Subnet,Security groups
+
+ https://aws.amazon.com/ec2/instance-types/
+ 
+##### AWS has the following naming convention:
+m5.2xlarge means
++ m:instance class
++ 5:generation (AWS improves them over time)
++ 2xlarge:size within the instance class
+
+  ![EC2 Instance types expampes](naming_convention.png)
+  Ec2 instance info
+  https://instances.vantage.sh/
+
+#### Introduction to Security Groups
+ + Security Groups are the fundamental of network security in AWS
+ + They control how traffic is allowed into or out of our EC2 instance.
+ + Security groups only contain allow rules
+ + Security groups rules can reference by IP or by security group
+ ![Security Groups](Security_Groups.png)
+#### Security Groups Depper Dive
+ + Security groups are action as a "Firewall" on EC2 instances
+ + The regulate:
+  * Access to Ports
+  * Authorised Ip ranges - IPv4 and IPv6
+  * Control of inbound network (from other to the instance)
+  * Control of outbound network (from the instance to other)
+  
+ 
+
+
+
 
 
 
