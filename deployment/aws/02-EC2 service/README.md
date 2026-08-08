@@ -93,6 +93,88 @@ m5.2xlarge means
  + 3389 = RDP (Remote Desktop Protocol) - log into a Windows instance
 
 
+ https://test-ipv6.com/
+
+ #### AMI Overview
+ + AMI= Amazon Machine Image
+ + AMI are a customization of an EC2 instance
+   * You add your own software,configuration,operating system,monitoring...
+   * Faster boot / configuration time because all your software is pre-packaged
+ + AMI are built for a specific region (and can be copied across regions)
+ + You can lunch EC2 instances from:
+   * A Public AMI:AWS provided
+   * Your own AMI: you make and maintain tem yourself
+   * An AWS Marketplace AMI: an AMI someone else made (and potentially sells)
+
+#### AMI Process (from an EC2 instance)
+  + Start an EC2 instance and customize it
+  + Stop the  instance (for data integrity)
+  + Build an AMI - this will also create EBS snapshots
+  + Launch instances from other AMIs
+    ![AMI](ami.png)
+
+#### EC2 Instance Storre
+ + EBS vloumes are network drives with good but "limited" performance
+ + If you need a high-performance hardware disk, use EC2 Instance Store
+ + Better I/O performance
+ + EC2 Instance Store lose their storage if they're stopped (ephemeral)
+ + Good for buffer / cache / scratch data / temporary content
+ + Risk of data loss if hardware fails
+ + Backups and Replication are your responsibility
+#### Local EC2 Instance Store
+ ![ec2_instance_store](ec2_instance_store.png)
+
+#### EBS Volume Types
+ + EBs Volumes come in 6 types
+   * gp2 / gp3 (SSD): General purpose SSD volume that balances price and performance for a wide variety of workloads
+   * io | / io2 Block Express (SSD): Highest-performance SSD volume for mission-critical low-latency or high-troughput workloads
+   * st | (HDD): Low cost HDD volume designed for frequently accessed,throughput-intensive workloads
+   * sc | (HDD): Lowest cost HDD volume designed for less frequently accessed workloads
+  + EBS Volumes are characterized in Size | Throughput | IOPS (I/O Ops Per Sec)
+  + When in doubt always consult the AWS documentation - it's good!
+  + Onlu gp2/gp3 and io1 / io2 Block Express can be used as boot volumes
+#### EBS Volume Types Use cases
+#### General Purpose SSD
+  + Cost effective storage,low-latency
+  + System boot volmes,Virtual desktops,Development and test environments
+  + 1 GiB - 16 TiB
+  + gp3:
+    * Baseline of 3,000 IOPS and throughput of 125 MiB/s
+    * Can increase IOPS up to 16,000 and throughput up to 1000 MiB/s independently
+  + gp2:
+    * Small gp2 volumes can burst IOPS to 3,000
+    * Size of the volume and IOPS are linked,  max IOPS is 16,000
+    * 3 IOPS per GB,means at 5,334 GB we are at the max IOPS
+#### Provisioned IOPS (PIOPS) SSD
+  + Critical business applications with sustained IOPS performance
+  + Or applications that need more than 16,000 IOPS
+  + Great for databases workloads (sensitive to storage perf and consistency)
+  + io | (4 GiB - 16 TiB)
+    * Max PIOPS : 64,000 for Nitro EC2 instances & 32,000 for other
+    * Can increase PIOPS independently from storage size
+  + io2 Block Express (4 GiB - 64 TiB):
+    * Sub-millisecond latency
+    * Max PIOPS:256,000 with an IOPS:GiB raio of 1,000:1
+    * Suports EBS Multi-attach
+
+#### Hard Disk Drives (HDD)
+  + Can not be a boot volume
+  + 125 GiB to 16 TiB
+  + Throughput Optimized HDD (st1)
+    * Big Data,Data Warehouse,Log Processing
+    * Max throughput 500 MiB/s max IOPS 500
+  + Cold HDD (sc1)
+    * For data that is infrequently accessed
+    * Scenarios where lowest cost is important
+    * Max throughput 250 MiB/s - max IOPS 250 
+https://aws.amazon.com/ebs/volume-types/#ssd-based-volumes--11s368y
+![ebs_multi_attach](ebs_multi_attach.png)
+![ebs_multi_attach](encryption.png)
+
+
+
+
+
 
 
 
