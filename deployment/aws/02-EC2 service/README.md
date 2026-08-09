@@ -167,9 +167,27 @@ m5.2xlarge means
     * For data that is infrequently accessed
     * Scenarios where lowest cost is important
     * Max throughput 250 MiB/s - max IOPS 250 
+
 https://aws.amazon.com/ebs/volume-types/#ssd-based-volumes--11s368y
 ![ebs_multi_attach](ebs_multi_attach.png)
 ![ebs_multi_attach](encryption.png)
+
+#### Amazon EFS - Elastic File System
+ + Manage NFS (network file system) that can be mounted on many EC2
+ + EFS works with EC2  instances in multi-AZ
+ + Highly available,scalable,expensive (3X gp2),pay per use
+![efs](efs.png)
+ + Use cases: content management,web serving,data sharing,Wordpress
+ + Uses NFSv4, 1 protocal
+ + Uses security group to control access to EFS
+ + Compatible with Linux based AMI (not Windows)
+ + Encription at rest using KMS
+ + POSIX file system (~Linux) that has a standard file API
+ + File system scales automatically,pay-per-use,no capacity planning!
+
+
+
+
 
 
 
