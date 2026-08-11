@@ -394,3 +394,7 @@ curl http://202.51.190.114/app3
 | Proxy (Path)  | <http://202.51.190.114/app2> |
 | Direct (Port) | <http://202.51.190.114:8092> |
 | Proxy (Path)  | <http://202.51.190.114/app3> |
+
+#### For Mongodb data dumping (Windows)
+
+& "C:\Program Files\MongoDB\Tools\100\bin\mongodump.exe" ` --uri="mongodb://opl-dev-db-user:lIpV7R75SYgBt@52.76.196.213:27888/opl_dev_db?authSource=admin" `  --out "F:\mongo-backup"
