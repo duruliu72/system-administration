@@ -148,7 +148,7 @@ sudo systemctl restart nginx
 4.Test it by visiting http://durulhoda.info
 
 
-#### ###########  ----------------------------------------------------------------------------------------------------------------------------------------------------
+#### For java Apllication
 
 ## Java Apps on Ubuntu Server with Public Access
 
