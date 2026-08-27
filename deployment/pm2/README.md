@@ -1,4 +1,6 @@
-#### PATH configuration for pnpm
+Git Install clone using Personal access tokens
+git clone https://user:ghp_token@github.com/xyx/pqr.git
+### PATH configuration for pnpm
 ```
 pnpm setup
 ```
@@ -11,7 +13,8 @@ Check the output
 ```
 echo $PATH
 ```
-For Windows after install node
+After install node
+For Window  using administrator PowerShell 
 ```
 sudo corepack enable
 sudo corepack prepare pnpm@latest --activate
