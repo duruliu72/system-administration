@@ -7,7 +7,27 @@
   ```
 
 ## SSH and SCP
-
+Two Machine ubuntu1 and ubuntu2
+Then fllowing have to do in ubuntu1
+```bash
+ssh-keygen
+ssh-copy-id vagrant@192.168.56.11
+```
+If Messahge show like ubuntu1@192.168.56.11: Permission denied (publickey).
+Then fllowing have to do in ubuntu2
+```bash
+sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf
+sudo sshd -t
+sudo systemctl restart ssh
+```
+Change 
+PasswordAuthentication yes
+from 
+PasswordAuthentication no
+```bash
+eval$(ssh-agent)
+ssh-add
+```
 ### SSH for client side configuration
 ```bash
 ssh-keygen -t rsa
