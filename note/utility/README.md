@@ -19,13 +19,14 @@ Then fllowing have to do in ubuntu2
 sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf
 sudo sshd -t
 sudo systemctl restart ssh
+ssh-copy-id vagrant@192.168.56.11
 ```
 Change 
 PasswordAuthentication yes
 from 
 PasswordAuthentication no
 ```bash
-eval$(ssh-agent)
+eval $(ssh-agent)
 ssh-add
 ```
 ### SSH for client side configuration
