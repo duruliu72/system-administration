@@ -29,6 +29,18 @@ PasswordAuthentication no
 eval $(ssh-agent)
 ssh-add
 ```
+For Graphical 
+```bash
+sudo apt install -y xfce4 xfce4-goodies
+sudo apt install -y tightvncserver
+vncserver
+vnsserver -kill :1
+nano ~/.vnc/xstartup
+```
+Edit this line
+#!/bin/sh
+xrdb $HOME/.Xresources
+startxfce4&
 ### SSH for client side configuration
 ```bash
 ssh-keygen -t rsa
