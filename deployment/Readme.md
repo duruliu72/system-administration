@@ -146,6 +146,7 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 4.Test it by visiting http://durulhoda.info
+
 sudo apt install certbot python3-certbot-nginx -y
 sudo certbot --nginx -d api.example.com
 sudo nginx -t
