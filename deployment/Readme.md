@@ -141,12 +141,15 @@ sudo apt install nginx
 ```
 3. Enable the configuration:
 ```
-sudo ln -s /etc/nginx/sites-available/nextjs /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/ecom.conf /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl restart nginx
 ```
 4.Test it by visiting http://durulhoda.info
-
+sudo apt install certbot python3-certbot-nginx -y
+sudo certbot --nginx -d api.example.com
+sudo nginx -t
+sudo systemctl reload nginx
 
 #### ###########  ----------------------------------------------------------------------------------------------------------------------------------------------------
 
